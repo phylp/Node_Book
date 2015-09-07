@@ -1,7 +1,7 @@
-function route(handle, pathname, response, postData) {     //unlike blocking example, here we added a response object to pass into function
+function route(handle, pathname, response, request) {     //unlike blocking example, here we added a response object to pass into function
 	console.log('About to route a request for ' + pathname);
 	if(typeof handle[pathname] === 'function'){
-		return handle[pathname](response, postData);
+		return handle[pathname](response, request);
 	} else {
 		console.log('No request handler found for ' + pathname);
 		response.writeHead(404, {'Content-Type': 'text/plain'});
