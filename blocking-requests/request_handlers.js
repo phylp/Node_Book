@@ -8,7 +8,7 @@ function start(){
   function sleep(milliSeconds){          //this is basically a simulation of a timeout function
   var startTime = new Date().getTime();
   while(new Date().getTime() < startTime + milliSeconds);
- }
+  }
 
   sleep(8000);                    
   return 'Hello Start';
